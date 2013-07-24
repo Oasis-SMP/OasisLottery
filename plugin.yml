@@ -1,0 +1,63 @@
+name: OasisLottery
+main: net.charter.orion_pax.OasisLottery.OasisLottery
+version: 1.0
+description: Oasis Lottery
+author: Paxination
+commands:
+  lotto:
+    description: Show players the current jackpot!
+    usage: "Usage: /<command>"
+    permission: oasislottery.lotto
+    permission-message: You don't have permissions for <permission>
+    
+  lottoplay:
+    description: Allows players to play the lottery!
+    usage: "Usage: /<command> AMOUNT"
+    permission: oasislottery.lottoplay
+    permission-message: You don't have permissions for <permission>
+    
+  lottopick:
+    description: Allows staff to randomly pick the winner for the lottery!
+    usage: "Usage: /<command>"
+    permission: oasislottery.lottopick
+    permission-message: You don't have permissions for <permission>
+    
+  lottoreset:
+    description: Allows staff to reset the lottery!
+    usage: "Usage: /<command> INITIAL_AMOUNT (optional)"
+    permission: oasislottery.lottoreset
+    permission-message: You don't have permissions for <permission>
+    
+  lottoadd:
+    description: Allows staff to ADD money into the JACKPOT!
+    usage: "Usage: /<command> AMOUNT"
+    permission: oasiselottery.lottoadd
+    permission-message: You don't have permissions for <permission>
+    
+  lottosub:
+    description: Allows staff to SUBTRACT money from the JACKPOT!
+    usage: "Usage: /<command> AMOUNT"
+    permission: oasislottery.lottosub
+    permission-message: You don't have permissions for <permission>
+    
+  lottolist:
+    description: Allows staff to list ALL players in the lottery!
+    usage: "Usage: /<command>"
+    permission: oasislottery.lottolist
+    permission-message: You don't have permissions for <permission>
+    
+permissions:
+    oasislottery.player.*:
+        description: Gives access to all player commands
+        children:
+            oasislottery.lotto: true
+            oasislottery.lottoplay: true
+            
+    oasislottery.staff.*:
+        description: Gives access to all staff commands
+        children:
+            oasislottery.lottopick: true
+            oasislottery.lottoreset: true
+            oasislottery.lottoadd: true
+            oasislottery.lottosub: true
+            oasislottery.lottolist: true
