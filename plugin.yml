@@ -31,7 +31,7 @@ commands:
   lottoadd:
     description: Allows staff to ADD money into the JACKPOT!
     usage: "Usage: /<command> AMOUNT"
-    permission: oasiselottery.lottoadd
+    permission: oasislottery.lottoadd
     permission-message: You don't have permissions for <permission>
     
   lottosub:
